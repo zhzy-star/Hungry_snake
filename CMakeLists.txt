@@ -4,5 +4,6 @@ project(snake)
 
 add_executable(
     ${PROJECT_NAME}
+    src/snake_game.cpp
     src/main.cpp
 )

@@ -3,17 +3,13 @@
 
 #include <iostream>
 #include <windows.h>
-#include <conio.h>
-#include <ctime>
-#include <vector>
-#include <fstream>
-#include <algorithm>
-#include <cstdlib>
-#include <string>
+#include "constants.h"
 
 class Draw{
-pubilc:
+public:
     void drawBorder();
     void gotoXY(int x, int y);
     void hideCursor();
 };
+
+#endif

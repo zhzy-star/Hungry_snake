@@ -1,113 +1,108 @@
 #include "snake.h"
 #include "draw.h"
+#include <iostream>
+using namespace std;
 
 Snake::Snake() : length(3), speed(250), direction(RIGHT) {
     body.resize(1000);
 }
 
 void Snake::updateSpeed() {
-    int a = snake.length - snake.length % 3;
+    int a = length - length % 3;
     switch (a) {
-        case 6: snake.speed = 200; break;
-        case 9: snake.speed = 180; break;
-        case 12: snake.speed = 160; break;
-        case 15: snake.speed = 140; break;
-        case 18: snake.speed = 120; break;
-        case 21: snake.speed = 100; break;
-        case 24: snake.speed = 80; break;
-        case 27: snake.speed = 60; break;
-        case 30: snake.speed = 40; break;
+        case 6: speed = 200; break;
+        case 9: speed = 180; break;
+        case 12: speed = 160; break;
+        case 15: speed = 140; break;
+        case 18: speed = 120; break;
+        case 21: speed = 100; break;
+        case 24: speed = 80; break;
+        case 27: speed = 60; break;
+        case 30: speed = 40; break;
         default: break;
     }
 }
 
-
-void Snake::moveSnake() {
-    Position tail = snake.body[snake.length - 1];
+void Snake::moveSnake(char nowDir) {
+    Food::Position tail = body[length - 1];
     
-    for (int i = snake.length - 1; i >= 1; i--) {
-        snake.body[i] = snake.body[i - 1];
+    for (int i = length - 1; i >= 1; i--) {
+        body[i] = body[i - 1];
     }
     
     switch (nowDir) {
-        case UP: snake.body[0].y--; break;
-        case DOWN: snake.body[0].y++; break;
-        case LEFT: snake.body[0].x--; break;
-        case RIGHT: snake.body[0].x++; break;
+        case UP: body[0].y--; break;
+        case DOWN: body[0].y++; break;
+        case LEFT: body[0].x--; break;
+        case RIGHT: body[0].x++; break;
     }
     
-    draw.gotoXY(snake.body[1].x, snake.body[1].y);
-    std::cout << "O";
-    draw.gotoXY(snake.body[0].x, snake.body[0].y);
-    std::cout << "Q";
+    draw.gotoXY(body[1].x, body[1].y);
+    cout << "O";
+    draw.gotoXY(body[0].x, body[0].y);
+    cout << "Q";
     
     bool ateFood = false;
     int foodType = -1;
     
-    if (snake.body[0].x == food.x && snake.body[0].y == food.y) {
-        ateFood = true;
-        foodType = 1;
-    } else if (snake.body[0].x == foods.x && snake.body[0].y == foods.y) {
-        ateFood = true;
-        foodType = 0;
-    } else if (snake.body[0].x == foodss.x && snake.body[0].y == foodss.y) {
-        ateFood = true;
-        foodType = 2;
-    }
+    // 这里需要修改，暂时注释掉食物检测逻辑
+    // if (body[0].x == food.x && body[0].y == food.y) {
+    //     ateFood = true;
+    //     foodType = 1;
+    // }
     
     if (ateFood) {
         int growth = (foodType == 1) ? 1 : (foodType == 0) ? 3 : 5;
-        snake.length += growth;
+        length += growth;
         
-        foodm.generateFood(rand() % 3);
-        foodm.generateBarrier();
+        // foodm.generateFood(rand() % 3);
+        // foodm.generateBarrier();
         
         draw.gotoXY(MAP_WIDTH + 10, 5);
-        std::cout << "Now score:" << snake.length - 3;
+        cout << "Now score:" << length - 3;
         
         updateSpeed();
     } else {
         draw.gotoXY(tail.x, tail.y);
-        std::cout << " ";
+        cout << " ";
     }
 }
 
 void Snake::initializeSnake() {
-    snake.body[0].x = MAP_WIDTH / 2 - 1;
-    snake.body[0].y = MAP_HEIGHT / 2 - 1;
-    draw.gotoXY(snake.body[0].x, snake.body[0].y);
-    std::cout << "Q";
+    body[0].x = MAP_WIDTH / 2 - 1;
+    body[0].y = MAP_HEIGHT / 2 - 1;
+    draw.gotoXY(body[0].x, body[0].y);
+    cout << "Q";
     
-    for (int i = 1; i < snake.length; i++) {
-        snake.body[i].y = snake.body[i-1].y;
-        snake.body[i].x = snake.body[i-1].x - 1;
-        draw.gotoXY(snake.body[i].x, snake.body[i].y);
-        std::cout << "O";
+    for (int i = 1; i < length; i++) {
+        body[i].y = body[i-1].y;
+        body[i].x = body[i-1].x - 1;
+        draw.gotoXY(body[i].x, body[i].y);
+        cout << "O";
     }
 }
 
-
-bool Snake::checkCollision() {
-    if (snake.body[0].x == 0 || snake.body[0].y == 0 || 
-        snake.body[0].x == MAP_WIDTH - 1 || snake.body[0].y == MAP_HEIGHT - 1) {
+bool Snake::checkCollision(const std::vector<Food::Position>& barriers) {
+    if (body[0].x == 0 || body[0].y == 0 || 
+        body[0].x == MAP_WIDTH - 1 || body[0].y == MAP_HEIGHT - 1) {
         return true;
     }
     
     for (size_t i = 0; i < barriers.size(); i++) {
-        if (snake.body[0].x == barriers[i].x && snake.body[0].y == barriers[i].y) {
+        if (body[0].x == barriers[i].x && body[0].y == barriers[i].y) {
             return true;
         }
     }
     
-    for (int i = 1; i < snake.length; i++) {
-        if (snake.body[0].x == snake.body[i].x && snake.body[0].y == snake.body[i].y) {
-            for (int j = i; j < snake.length; j++) {
-                draw.gotoXY(snake.body[j].x, snake.body[j].y);
-                std::cout << " ";
+    for (int i = 1; i < length; i++) {
+        if (body[0].x == body[i].x && body[0].y == body[i].y) {
+            for (int j = i; j < length; j++) {
+                draw.gotoXY(body[j].x, body[j].y);
+                cout << " ";
             }
-            snake.length = i;
+            length = i;
             draw.gotoXY(MAP_WIDTH + 10, 5);
-            std::cout << "Now Score: " << snake.length - 3;
+            cout << "Now Score: " << length - 3;
             return false;
         }
     }

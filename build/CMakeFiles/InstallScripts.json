@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/vs_code/hungry_snake/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

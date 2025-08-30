@@ -10,27 +10,20 @@
 #include <algorithm>
 #include <cstdlib>
 #include <string>
+#include "constants.h"
 
-const int MAP_HEIGHT = 30;
-const int MAP_WIDTH = 80;
-const char UP = 'w';
-const char DOWN = 's';
-const char LEFT = 'a';
-const char RIGHT = 'd';
-const int MAX_SCORES = 100;
-const std::string SCORE_FILE = "scores.txt";
-
-struct Position {
-    int x;
-    int y;
-};
+// 前向声明
+class Snake;
+class Menu;
+class Draw;
+class Food;
 
 class Game {
 private:
-    Snake snake;
-    Menu menu;
-    Draw draw;
-    Food food;
+    Snake* snake;
+    Menu* menu;
+    Draw* draw;
+    Food* food;
     char nowDir;
     bool gameOver;
     void handleInput();
@@ -38,6 +31,9 @@ private:
     
 public:
     Game();
+    ~Game();
     void runGame();
     void run();
 };
+
+#endif

@@ -10,12 +10,16 @@
 #include <algorithm>
 #include <cstdlib>
 #include <string>
+#include "constants.h"
+#include "draw.h"
 
 class Menu{
 public:
-    Draw draw;;
+    Draw draw;
     void showAbout();
     void showHelp();
     void showRanking();
-
+    void showMenu();
 };
+
+#endif

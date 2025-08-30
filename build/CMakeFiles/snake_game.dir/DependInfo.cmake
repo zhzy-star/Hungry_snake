@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/vs_code/hungry_snake/src/draw.cpp" "CMakeFiles/snake_game.dir/src/draw.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/draw.cpp.obj.d"
-  "E:/vs_code/hungry_snake/src/food.cpp" "CMakeFiles/snake_game.dir/src/food.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/food.cpp.obj.d"
-  "E:/vs_code/hungry_snake/src/game.cpp" "CMakeFiles/snake_game.dir/src/game.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/game.cpp.obj.d"
-  "E:/vs_code/hungry_snake/src/main.cpp" "CMakeFiles/snake_game.dir/src/main.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/main.cpp.obj.d"
-  "E:/vs_code/hungry_snake/src/menu.cpp" "CMakeFiles/snake_game.dir/src/menu.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/menu.cpp.obj.d"
-  "E:/vs_code/hungry_snake/src/snake.cpp" "CMakeFiles/snake_game.dir/src/snake.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/snake.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/draw.cpp" "CMakeFiles/snake_game.dir/src/draw.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/draw.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/food.cpp" "CMakeFiles/snake_game.dir/src/food.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/food.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/game.cpp" "CMakeFiles/snake_game.dir/src/game.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/game.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/main.cpp" "CMakeFiles/snake_game.dir/src/main.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/main.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/menu.cpp" "CMakeFiles/snake_game.dir/src/menu.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/menu.cpp.obj.d"
+  "E:/vs_code/Hungry_snake/src/snake.cpp" "CMakeFiles/snake_game.dir/src/snake.cpp.obj" "gcc" "CMakeFiles/snake_game.dir/src/snake.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

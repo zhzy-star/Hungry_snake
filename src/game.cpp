@@ -51,7 +51,7 @@ void Game::saveScore(int score) {
     outFile.close();
 }
 
-void Game::runGame() {
+void Game::runGame_one() { //无尽模式
     system("cls");
     food->barriers.clear();  
     snake->length = 3;      
@@ -64,13 +64,38 @@ void Game::runGame() {
     
     food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
     food->generateBarrier(snake->body, snake->length, food->barriers);
-    
+
     draw->gotoXY(MAP_WIDTH + 10, 5);  
     cout << "Now Score: 0";
     
     while (!gameOver) {
         handleInput();
         snake->moveSnake(nowDir);  
+        
+        // 在游戏循环中添加食物检测
+        if (snake->body[0].x == food->food.x && snake->body[0].y == food->food.y) {
+            snake->length += 1;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            // 更新分数显示
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foods.x && snake->body[0].y == food->foods.y) {
+            snake->length += 3;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foodss.x && snake->body[0].y == food->foodss.y) {
+            snake->length += 5;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        
         gameOver = snake->checkCollision(food->barriers);  
         Sleep(snake->speed); 
     }
@@ -88,13 +113,51 @@ void Game::runGame() {
     menu->showRanking(); 
 }
 
+void Game::runGame_two(){ // 竞速模式
+
+}
+
+void Game::runGame_three(){ // 障碍模式
+
+}
+
+void Game::choose_runGame(){
+    system("cls");
+    draw->gotoXY(40, 12);
+    cout << "Choose your mode:";
+    draw->gotoXY(43, 14);
+    cout << "Press 1 Endless Mode";
+    draw->gotoXY(43, 16);
+    cout << "Press 2 Speed Mode";
+    draw->gotoXY(43, 18);
+    cout << "Press 3 Barrier Mode";
+    draw->gotoXY(43, 20);
+    cout << "Press any other key to return to the main menu";
+    
+    char choice = _getch();
+    switch (choice) {
+        case '1':
+            runGame_one();
+            break;
+        case '2':
+            runGame_two();
+            break;
+        case '3':
+            runGame_three();
+            break;
+        default:
+            return;
+    }
+}
+
+
 void Game::run() {
     while (true) {
         menu->showMenu();  
         char choice = _getch();
         switch (choice) {
             case '1':
-                runGame();
+                choose_runGame();
                 break;
             case '2':
                 menu->showHelp();  

@@ -1,6 +1,6 @@
 CMakeFiles/snake_game.dir/src/snake.cpp.obj: \
- E:\vs_code\hungry_snake\src\snake.cpp \
- E:/vs_code/hungry_snake/include/snake.h \
+ E:\vs_code\Hungry_snake\src\snake.cpp \
+ E:/vs_code/Hungry_snake/include/snake.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/iostream \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -141,8 +141,8 @@ CMakeFiles/snake_game.dir/src/snake.cpp.obj: \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_vector.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_bvector.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/vector.tcc \
- E:/vs_code/hungry_snake/include/constants.h \
- E:/vs_code/hungry_snake/include/draw.h \
+ E:/vs_code/Hungry_snake/include/constants.h \
+ E:/vs_code/Hungry_snake/include/draw.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/windows.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/sdkddkver.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/excpt.h \
@@ -407,5 +407,5 @@ CMakeFiles/snake_game.dir/src/snake.cpp.obj: \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/winsvc.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/mcx.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/x86_64-w64-mingw32/include/imm.h \
- E:/vs_code/hungry_snake/include/food.h \
- E:/vs_code/hungry_snake/include/draw.h
+ E:/vs_code/Hungry_snake/include/food.h \
+ E:/vs_code/Hungry_snake/include/draw.h

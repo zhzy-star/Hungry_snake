@@ -1,4 +1,4 @@
-# Install script for directory: E:/vs_code/hungry_snake
+# Install script for directory: E:/vs_code/Hungry_snake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

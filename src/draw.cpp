@@ -18,17 +18,11 @@ void Draw::drawBorder() {
     }
     for (int i = 1; i < MAP_HEIGHT; i++) {
         gotoXY(0, i);
-         if (i % 2 == 0){
-            std::cout << "[";
-        }else{
-            std::cout << "{";
-        }
+        std::cout << "[";
         gotoXY(MAP_WIDTH - 1, i);
-         if (i % 2 == 1){
-            std::cout << "]";
-        }else{
-            std::cout << "}";
-        }
+        std::cout << "]";
+
+
     }
 }
 

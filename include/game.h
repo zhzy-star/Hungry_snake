@@ -32,7 +32,10 @@ private:
 public:
     Game();
     ~Game();
-    void runGame();
+    void runGame_one();
+    void runGame_two();
+    void runGame_three();
+    void choose_runGame();
     void run();
 };
 

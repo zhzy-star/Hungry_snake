@@ -56,7 +56,7 @@ RM = "E:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\vs_code\hungry_snake
+CMAKE_SOURCE_DIR = E:\vs_code\Hungry_snake
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = E:\vs_code\hungry_snake\build

@@ -267,7 +267,7 @@ SnakeGame_BINARY_DIR:STATIC=E:/vs_code/hungry_snake/build
 SnakeGame_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-SnakeGame_SOURCE_DIR:STATIC=E:/vs_code/hungry_snake
+SnakeGame_SOURCE_DIR:STATIC=E:/vs_code/Hungry_snake
 
 
 ########################

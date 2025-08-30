@@ -1,6 +1,6 @@
 CMakeFiles/snake_game.dir/src/main.cpp.obj: \
- E:\vs_code\hungry_snake\src\main.cpp \
- E:/vs_code/hungry_snake/include/game.h \
+ E:\vs_code\Hungry_snake\src\main.cpp \
+ E:/vs_code/Hungry_snake/include/game.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/iostream \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -419,4 +419,4 @@ CMakeFiles/snake_game.dir/src/main.cpp.obj: \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_heap.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uniform_int_dist.h \
  E:/x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_tempbuf.h \
- E:/vs_code/hungry_snake/include/constants.h
+ E:/vs_code/Hungry_snake/include/constants.h

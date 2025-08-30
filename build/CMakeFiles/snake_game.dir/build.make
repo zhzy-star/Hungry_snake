@@ -52,7 +52,7 @@ RM = "E:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\vs_code\hungry_snake
+CMAKE_SOURCE_DIR = E:\vs_code\Hungry_snake
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = E:\vs_code\hungry_snake\build
@@ -73,93 +73,93 @@ CMakeFiles/snake_game.dir/codegen:
 
 CMakeFiles/snake_game.dir/src/main.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/main.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/main.cpp.obj: E:/vs_code/hungry_snake/src/main.cpp
+CMakeFiles/snake_game.dir/src/main.cpp.obj: E:/vs_code/Hungry_snake/src/main.cpp
 CMakeFiles/snake_game.dir/src/main.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/snake_game.dir/src/main.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/main.cpp.obj -MF CMakeFiles\snake_game.dir\src\main.cpp.obj.d -o CMakeFiles\snake_game.dir\src\main.cpp.obj -c E:\vs_code\hungry_snake\src\main.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/main.cpp.obj -MF CMakeFiles\snake_game.dir\src\main.cpp.obj.d -o CMakeFiles\snake_game.dir\src\main.cpp.obj -c E:\vs_code\Hungry_snake\src\main.cpp
 
 CMakeFiles/snake_game.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/main.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\main.cpp > CMakeFiles\snake_game.dir\src\main.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\main.cpp > CMakeFiles\snake_game.dir\src\main.cpp.i
 
 CMakeFiles/snake_game.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/main.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\main.cpp -o CMakeFiles\snake_game.dir\src\main.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\main.cpp -o CMakeFiles\snake_game.dir\src\main.cpp.s
 
 CMakeFiles/snake_game.dir/src/draw.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/draw.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/draw.cpp.obj: E:/vs_code/hungry_snake/src/draw.cpp
+CMakeFiles/snake_game.dir/src/draw.cpp.obj: E:/vs_code/Hungry_snake/src/draw.cpp
 CMakeFiles/snake_game.dir/src/draw.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/snake_game.dir/src/draw.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/draw.cpp.obj -MF CMakeFiles\snake_game.dir\src\draw.cpp.obj.d -o CMakeFiles\snake_game.dir\src\draw.cpp.obj -c E:\vs_code\hungry_snake\src\draw.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/draw.cpp.obj -MF CMakeFiles\snake_game.dir\src\draw.cpp.obj.d -o CMakeFiles\snake_game.dir\src\draw.cpp.obj -c E:\vs_code\Hungry_snake\src\draw.cpp
 
 CMakeFiles/snake_game.dir/src/draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/draw.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\draw.cpp > CMakeFiles\snake_game.dir\src\draw.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\draw.cpp > CMakeFiles\snake_game.dir\src\draw.cpp.i
 
 CMakeFiles/snake_game.dir/src/draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/draw.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\draw.cpp -o CMakeFiles\snake_game.dir\src\draw.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\draw.cpp -o CMakeFiles\snake_game.dir\src\draw.cpp.s
 
 CMakeFiles/snake_game.dir/src/food.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/food.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/food.cpp.obj: E:/vs_code/hungry_snake/src/food.cpp
+CMakeFiles/snake_game.dir/src/food.cpp.obj: E:/vs_code/Hungry_snake/src/food.cpp
 CMakeFiles/snake_game.dir/src/food.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake_game.dir/src/food.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/food.cpp.obj -MF CMakeFiles\snake_game.dir\src\food.cpp.obj.d -o CMakeFiles\snake_game.dir\src\food.cpp.obj -c E:\vs_code\hungry_snake\src\food.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/food.cpp.obj -MF CMakeFiles\snake_game.dir\src\food.cpp.obj.d -o CMakeFiles\snake_game.dir\src\food.cpp.obj -c E:\vs_code\Hungry_snake\src\food.cpp
 
 CMakeFiles/snake_game.dir/src/food.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/food.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\food.cpp > CMakeFiles\snake_game.dir\src\food.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\food.cpp > CMakeFiles\snake_game.dir\src\food.cpp.i
 
 CMakeFiles/snake_game.dir/src/food.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/food.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\food.cpp -o CMakeFiles\snake_game.dir\src\food.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\food.cpp -o CMakeFiles\snake_game.dir\src\food.cpp.s
 
 CMakeFiles/snake_game.dir/src/game.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/game.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/game.cpp.obj: E:/vs_code/hungry_snake/src/game.cpp
+CMakeFiles/snake_game.dir/src/game.cpp.obj: E:/vs_code/Hungry_snake/src/game.cpp
 CMakeFiles/snake_game.dir/src/game.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snake_game.dir/src/game.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/game.cpp.obj -MF CMakeFiles\snake_game.dir\src\game.cpp.obj.d -o CMakeFiles\snake_game.dir\src\game.cpp.obj -c E:\vs_code\hungry_snake\src\game.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/game.cpp.obj -MF CMakeFiles\snake_game.dir\src\game.cpp.obj.d -o CMakeFiles\snake_game.dir\src\game.cpp.obj -c E:\vs_code\Hungry_snake\src\game.cpp
 
 CMakeFiles/snake_game.dir/src/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/game.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\game.cpp > CMakeFiles\snake_game.dir\src\game.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\game.cpp > CMakeFiles\snake_game.dir\src\game.cpp.i
 
 CMakeFiles/snake_game.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/game.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\game.cpp -o CMakeFiles\snake_game.dir\src\game.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\game.cpp -o CMakeFiles\snake_game.dir\src\game.cpp.s
 
 CMakeFiles/snake_game.dir/src/menu.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/menu.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/menu.cpp.obj: E:/vs_code/hungry_snake/src/menu.cpp
+CMakeFiles/snake_game.dir/src/menu.cpp.obj: E:/vs_code/Hungry_snake/src/menu.cpp
 CMakeFiles/snake_game.dir/src/menu.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake_game.dir/src/menu.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/menu.cpp.obj -MF CMakeFiles\snake_game.dir\src\menu.cpp.obj.d -o CMakeFiles\snake_game.dir\src\menu.cpp.obj -c E:\vs_code\hungry_snake\src\menu.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/menu.cpp.obj -MF CMakeFiles\snake_game.dir\src\menu.cpp.obj.d -o CMakeFiles\snake_game.dir\src\menu.cpp.obj -c E:\vs_code\Hungry_snake\src\menu.cpp
 
 CMakeFiles/snake_game.dir/src/menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/menu.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\menu.cpp > CMakeFiles\snake_game.dir\src\menu.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\menu.cpp > CMakeFiles\snake_game.dir\src\menu.cpp.i
 
 CMakeFiles/snake_game.dir/src/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/menu.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\menu.cpp -o CMakeFiles\snake_game.dir\src\menu.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\menu.cpp -o CMakeFiles\snake_game.dir\src\menu.cpp.s
 
 CMakeFiles/snake_game.dir/src/snake.cpp.obj: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/snake.cpp.obj: CMakeFiles/snake_game.dir/includes_CXX.rsp
-CMakeFiles/snake_game.dir/src/snake.cpp.obj: E:/vs_code/hungry_snake/src/snake.cpp
+CMakeFiles/snake_game.dir/src/snake.cpp.obj: E:/vs_code/Hungry_snake/src/snake.cpp
 CMakeFiles/snake_game.dir/src/snake.cpp.obj: CMakeFiles/snake_game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\vs_code\hungry_snake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snake_game.dir/src/snake.cpp.obj"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/snake.cpp.obj -MF CMakeFiles\snake_game.dir\src\snake.cpp.obj.d -o CMakeFiles\snake_game.dir\src\snake.cpp.obj -c E:\vs_code\hungry_snake\src\snake.cpp
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/snake.cpp.obj -MF CMakeFiles\snake_game.dir\src\snake.cpp.obj.d -o CMakeFiles\snake_game.dir\src\snake.cpp.obj -c E:\vs_code\Hungry_snake\src\snake.cpp
 
 CMakeFiles/snake_game.dir/src/snake.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/src/snake.cpp.i"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\hungry_snake\src\snake.cpp > CMakeFiles\snake_game.dir\src\snake.cpp.i
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\vs_code\Hungry_snake\src\snake.cpp > CMakeFiles\snake_game.dir\src\snake.cpp.i
 
 CMakeFiles/snake_game.dir/src/snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/src/snake.cpp.s"
-	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\hungry_snake\src\snake.cpp -o CMakeFiles\snake_game.dir\src\snake.cpp.s
+	E:\x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\vs_code\Hungry_snake\src\snake.cpp -o CMakeFiles\snake_game.dir\src\snake.cpp.s
 
 # Object files for target snake_game
 snake_game_OBJECTS = \
@@ -195,6 +195,6 @@ CMakeFiles/snake_game.dir/clean:
 .PHONY : CMakeFiles/snake_game.dir/clean
 
 CMakeFiles/snake_game.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\vs_code\hungry_snake E:\vs_code\hungry_snake E:\vs_code\hungry_snake\build E:\vs_code\hungry_snake\build E:\vs_code\hungry_snake\build\CMakeFiles\snake_game.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\vs_code\Hungry_snake E:\vs_code\Hungry_snake E:\vs_code\hungry_snake\build E:\vs_code\hungry_snake\build E:\vs_code\hungry_snake\build\CMakeFiles\snake_game.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/snake_game.dir/depend
 

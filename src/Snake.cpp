@@ -45,12 +45,6 @@ void Snake::moveSnake(char nowDir) {
     bool ateFood = false;
     int foodType = -1;
     
-    // 这里需要修改，暂时注释掉食物检测逻辑
-    // if (body[0].x == food.x && body[0].y == food.y) {
-    //     ateFood = true;
-    //     foodType = 1;
-    // }
-    
     if (ateFood) {
         int growth = (foodType == 1) ? 1 : (foodType == 0) ? 3 : 5;
         length += growth;

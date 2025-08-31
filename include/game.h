@@ -24,8 +24,10 @@ private:
     Menu* menu;
     Draw* draw;
     Food* food;
+    clock_t startTime;
     char nowDir;
     bool gameOver;
+    bool gameWin;
     void handleInput();
     void saveScore(int score);
     

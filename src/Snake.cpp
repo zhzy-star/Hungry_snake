@@ -90,14 +90,7 @@ bool Snake::checkCollision(const std::vector<Food::Position>& barriers) {
     
     for (int i = 1; i < length; i++) {
         if (body[0].x == body[i].x && body[0].y == body[i].y) {
-            for (int j = i; j < length; j++) {
-                draw.gotoXY(body[j].x, body[j].y);
-                cout << " ";
-            }
-            length = i;
-            draw.gotoXY(MAP_WIDTH + 10, 5);
-            cout << "Now Score: " << length - 3;
-            return false;
+            return true;
         }
     }
     

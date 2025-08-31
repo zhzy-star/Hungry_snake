@@ -1,3 +1,0 @@
-E:/vs_code/hungry_snake/build/CMakeFiles/snake_game.dir
-E:/vs_code/hungry_snake/build/CMakeFiles/edit_cache.dir
-E:/vs_code/hungry_snake/build/CMakeFiles/rebuild_cache.dir

@@ -114,11 +114,136 @@ void Game::runGame_one() { //无尽模式
 }
 
 void Game::runGame_two(){ // 竞速模式
+    system("cls");
+    food->barriers.clear();  
+    snake->length = 3;      
+    snake->speed = 250;
+    startTime = clock();      
+    nowDir = RIGHT;
+    gameOver = false;
 
+    draw->drawBorder();     
+    snake->initializeSnake(); 
+    
+    food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+
+    draw->gotoXY(MAP_WIDTH + 10, 5);  
+    cout << "Target Score: 100";
+    draw->gotoXY(MAP_WIDTH + 10, 10);  
+    cout << "Now Score: 0";
+    draw->gotoXY(MAP_WIDTH + 10, 15);  // 添加时间显示位置
+    cout << "Time: 0s";
+
+    while (!gameOver || gameWin) {
+        handleInput();
+        snake->moveSnake(nowDir);  
+        
+        // 在游戏循环中添加食物检测
+        if (snake->body[0].x == food->food.x && snake->body[0].y == food->food.y) {
+            snake->length += 1;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            // 更新分数显示
+            draw->gotoXY(MAP_WIDTH + 10, 10);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foods.x && snake->body[0].y == food->foods.y) {
+            snake->length += 3;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            draw->gotoXY(MAP_WIDTH + 10, 10);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foodss.x && snake->body[0].y == food->foodss.y) {
+            snake->length += 5;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            
+            draw->gotoXY(MAP_WIDTH + 10, 10);
+            cout << "Now Score: " << snake->length - 3;
+        }
+
+        // 更新计时器显示（每秒更新一次）
+        clock_t currentTime = clock();
+        int elapsedSeconds = (int)((currentTime - startTime) / CLOCKS_PER_SEC);
+        
+        static int lastDisplayedSecond = -1;
+        if (elapsedSeconds != lastDisplayedSecond) {
+            draw->gotoXY(MAP_WIDTH + 10, 15);
+            cout << "Time: " << elapsedSeconds << "s";
+            lastDisplayedSecond = elapsedSeconds;
+        }
+
+        if (snake->length - 3 >= 100){
+            gameWin = true;
+        }
+        
+        gameOver = snake->checkCollision(food->barriers);  
+        Sleep(snake->speed); 
+    }
+    
+    // system("cls");
+    // draw->gotoXY(45, 14); 
+    // cout << "Final Score: " << snake->length - 3;
+    // draw->gotoXY(45, 16);  
+    // cout << "Game Over!";
+    // draw->gotoXY(45, 18); 
+    // cout << "Press any key return to the ranking list";
+    // _getch(); --竞速模式排行榜还待改动
+    
+    // saveScore(snake->length - 3);
+    // menu->showRanking(); 
 }
 
 void Game::runGame_three(){ // 障碍模式
+    system("cls");
+    food->barriers.clear();  
+    snake->length = 3;      
+    snake->speed = 250;     
+    nowDir = RIGHT;
+    gameOver = false;
 
+    draw->drawBorder();     
+    snake->initializeSnake(); 
+    
+    food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+
+    draw->gotoXY(MAP_WIDTH + 10, 5);  
+    cout << "Target Score: 100";
+    draw->gotoXY(MAP_WIDTH + 10, 10);  
+    cout << "Now Score: 0";
+
+    while (!gameOver) {
+        handleInput();
+        snake->moveSnake(nowDir);  
+        
+        // 在游戏循环中添加食物检测
+        if (snake->body[0].x == food->food.x && snake->body[0].y == food->food.y) {
+            snake->length += 1;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            food->generateBarrier(snake->body, snake->length, food->barriers);
+            // 更新分数显示
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foods.x && snake->body[0].y == food->foods.y) {
+            snake->length += 3;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            food->generateBarrier(snake->body, snake->length, food->barriers);
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        else if (snake->body[0].x == food->foodss.x && snake->body[0].y == food->foodss.y) {
+            snake->length += 5;
+            food->generateFood(rand() % 3, snake->body, snake->length, food->barriers);
+            food->generateBarrier(snake->body, snake->length, food->barriers);
+            draw->gotoXY(MAP_WIDTH + 10, 5);
+            cout << "Now Score: " << snake->length - 3;
+        }
+        
+        gameOver = snake->checkCollision(food->barriers);  
+        Sleep(snake->speed); 
+    }
+    
 }
 
 void Game::choose_runGame(){

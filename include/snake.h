@@ -17,7 +17,7 @@ public:
     int speed;
     char direction;
     
-    bool checkCollision(const std::vector<Food::Position>& barriers);
+    bool checkCollision(const std::vector<Food::Position>& barriers, GameMode mode = MODE_NORMAL);
     Snake();
     void updateSpeed();
     void moveSnake(char nowDir);

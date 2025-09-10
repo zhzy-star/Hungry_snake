@@ -18,7 +18,7 @@ public:
     Draw draw;
     void showAbout();
     void showHelp();
-    void showRanking();
+    void showRanking(GameType type = TYPE_ENDLESS); 
     void showMenu();
 };
 

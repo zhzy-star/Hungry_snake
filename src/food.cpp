@@ -2,9 +2,31 @@
 #include <iostream>
 using namespace std;
 
+void Food::clearFoods() {
+    foods.clear();
+}
+
+void Food::drawAllFoods() {
+    for (const auto& food : foods) {
+        draw.gotoXY(food.x, food.y);
+        switch (food.type) {
+            case 0: case 1: case 2: case 3:
+                cout << "$"; break; // 1分食物
+            case 4: case 5: case 6:
+                cout << "&"; break; // 3分食物
+            case 7:
+                cout << "#"; break; // 5分食物
+            case 8: case 9:
+                cout << "%"; break; // 加速食物
+            case 10:
+                cout << "@"; break; // 无敌食物
+        }
+    }
+}
 void Food::generateFood(int type, const std::vector<Position>& snakeBody, int snakeLength, const std::vector<Position>& existingBarriers) {
     bool flag;
     Position newFood;
+    newFood.type = type;
     
     do {
         flag = false;
@@ -28,29 +50,24 @@ void Food::generateFood(int type, const std::vector<Position>& snakeBody, int sn
         }
         
         // 检查是否与其他食物重叠
-        if ((type != 1 && newFood.x == food.x && newFood.y == food.y) ||
-            (type != 0 && newFood.x == foods.x && newFood.y == foods.y) ||
-            (type != 2 && newFood.x == foodss.x && newFood.y == foodss.y)) {
-            flag = true;
+        for (const auto& existingFood : foods) {
+            if (existingFood.x == newFood.x && existingFood.y == newFood.y) {
+                flag = true;
+                break;
+            }
         }
     } while (flag);
     
+    foods.push_back(newFood);
+    
+    // 立即绘制新食物
+    draw.gotoXY(newFood.x, newFood.y);
     switch (type) {
-        case 1:
-            food = newFood;
-            draw.gotoXY(food.x, food.y);
-            cout << "$";
-            break;
-        case 0:
-            foods = newFood;
-            draw.gotoXY(foods.x, foods.y);
-            cout << "&";
-            break;
-        case 2:
-            foodss = newFood;
-            draw.gotoXY(foodss.x, foodss.y);
-            cout << "#";
-            break;
+        case 0: case 1: case 2: case 3: cout << "$"; break;
+        case 4: case 5: case 6: cout << "&"; break;
+        case 7: cout << "#"; break;
+        case 8: case 9: cout << "%"; break;
+        case 10: cout << "@"; break;
     }
 }
 
@@ -64,11 +81,11 @@ void Food::generateBarrier(const std::vector<Position>& snakeBody, int snakeLeng
         newBarrier.y = rand() % (MAP_HEIGHT - 2) + 1;
         
         // 检查是否与食物重叠
-        if ((newBarrier.x == food.x && newBarrier.y == food.y) ||
-            (newBarrier.x == foods.x && newBarrier.y == foods.y) ||
-            (newBarrier.x == foodss.x && newBarrier.y == foodss.y)) {
-            flag = true;
-            continue;
+        for (const auto& food : foods) {
+            if (food.x == newBarrier.x && food.y == newBarrier.y) {
+                flag = true;
+                break;
+            }
         }
         
         // 检查是否与蛇身重叠

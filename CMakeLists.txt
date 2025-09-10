@@ -16,7 +16,10 @@ add_executable(snake_game
     src/game.cpp
     src/menu.cpp
     src/snake.cpp
+    src/music.cpp
 )
+
+target_link_libraries(snake_game winmm)
 
 # 直接链接Windows库（不需要find_library）
 if(WIN32)

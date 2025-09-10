@@ -1,0 +1,12 @@
+# 通用规则
+*.o
+*.a
+*.so
+*.out
+*.exe
+__pycache__/
+*.pyc
+*.pyo
+.vscode/
+.idea/
+.DS_Store

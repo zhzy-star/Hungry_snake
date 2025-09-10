@@ -13,15 +13,16 @@ public:
     struct Position {
         int x;
         int y;
+        int type; // 0: 1分食物, 1: 3分食物, 2: 5分食物, 3: 加速食物，4：无敌食物
     };
     
-    Position food;
-    Position foods;
-    Position foodss;
+    std::vector<Position> foods;
     std::vector<Position> barriers;
     
     void generateFood(int type, const std::vector<Position>& snakeBody, int snakeLength, const std::vector<Position>& existingBarriers);
     void generateBarrier(const std::vector<Position>& snakeBody, int snakeLength, const std::vector<Position>& existingBarriers);
+    void drawAllFoods(); 
+    void clearFoods();
 };
 
 #endif

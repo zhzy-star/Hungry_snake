@@ -69,7 +69,6 @@ void Game::activateGodMode() {
     if (!isGodModeActive) {
         isGodModeActive = true;
         godModeStartTime = clock();
-        cout << "\a"; // 提示音
         // 视觉提示
         draw->gotoXY(MAP_WIDTH + 10, 12);
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14); // 黄色
@@ -134,9 +133,6 @@ void Game::activateSpeedBoost() {
         speedBoostStartTime = clock();
         originalSpeed = snake->speed; // 保存当前速度
         snake->speed /= SPEED_BOOST_MULTIPLIER; // 加速
-
-        // 提示音
-        cout << "\a";
 
         // 视觉提示
         draw->gotoXY(MAP_WIDTH + 10, 13);
@@ -336,6 +332,7 @@ void Game::runGame_one() { //无尽模式
     }
     
     system("cls");
+    music->game_over();
     int finalScore = snake->length - 3;
     draw->gotoXY(45, 14); 
     cout << "Final Score: " << finalScore;
@@ -397,6 +394,7 @@ void Game::runGame_two(){ // 竞速模式
     
     system("cls");
     if (gameWin) {
+        music->win();
         int elapsedSeconds = (int)((clock() - startTime) / CLOCKS_PER_SEC);
         draw->gotoXY(45, 14); 
         cout << "Congratulations! You Win!";
@@ -408,6 +406,7 @@ void Game::runGame_two(){ // 竞速模式
         
         saveScore(elapsedSeconds, TYPE_SPEED); // 竞速模式保存时间（越小越好）
     } else {
+        music->game_over();
         draw->gotoXY(45, 14); 
         cout << "Game Over!";
         draw->gotoXY(45, 16);  
@@ -443,6 +442,7 @@ void Game::runGame_three(){ // 障碍模式
     }
     
     system("cls");
+    music->game_over();
     int finalScore = snake->length - 3;
     draw->gotoXY(45, 14); 
     cout << "Final Score: " << finalScore;
@@ -504,6 +504,7 @@ void Game::choose_runGame(){
 
 void Game::run() {
     while (true) {
+        music->playBackgroundMusic();
         menu->showMenu();  
         char choice = _getch();
         switch (choice) {
